@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /currency-conversion-system
+
+openapi:
+  url: http://localhost:8080
+  
+springdoc:
+  swagger-ui.path: /documentation
+  api-docs.path: /api-docs
+
+logging:
+  level:
+    org.springframework: ERROR
+    com.ozan.currency.conversion.system: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+    file: "%d %p %c{1} [%t] %m%n"
+  file:
+    name: logs/currencyConversionSystem.log
+  config: classpath:logback-spring.xml
